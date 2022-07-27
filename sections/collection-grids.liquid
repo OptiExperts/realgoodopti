@@ -23,7 +23,7 @@
                   <h4>{{ block.settings.collgrid_item_title }}</h4> 
                   <div class="item--image">
                     {%- if block.settings.collgrid_item_image -%}
-                    <img src="{{ block.settings.collgrid_item_image | img_url: '350x350' }}" alt="{{ block.settings.collgrid_item_title }}">
+                    <img class="lazy2" data-src="{{ block.settings.collgrid_item_image | img_url: '350x350' }}" alt="{{ block.settings.collgrid_item_title }}">
                     {% endif %}
                   </div>
                 </a>

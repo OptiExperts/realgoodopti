@@ -19,7 +19,7 @@
               <a href="{{block.settings.g4col_item_link}}">
               {% endif %}
               {%- if block.settings.g4col_item_image -%}
-              <img src="{{ block.settings.g4col_item_image | img_url: 'master' }}" alt="{{ block.settings.g4col_item_title }}">
+              <img class="lazy2" data-src="{{ block.settings.g4col_item_image | img_url: 'master' }}" alt="{{ block.settings.g4col_item_title }}">
               {% endif %}
               {%- if block.settings.g4col_item_link -%}
               </a>
