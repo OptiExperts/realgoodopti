@@ -11,7 +11,7 @@
             <img data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/922x329 {% endif %}" class="lazyload img-fluid" alt="">
           	
             {% if section.settings.banner_img_mob != blank  %}
-            	<img src="{{ section.settings.banner_img_mob | img_url: 'master' }}" at="" class="lazyload img-fluid mobile">            
+            	<img data-src="{{ section.settings.banner_img_mob | img_url: 'master' }}" at="" class="lazy2 img-fluid mobile">            
           	{% endif %}
             
           </div>
