@@ -1,3 +1,4 @@
+{% if trmplate contains 'index' %}
 <script type="lazyload2">
   //add stylesheet
   function addCss(fileName) {
@@ -213,6 +214,7 @@
   {% endif %}
 </script>
 
+{% endif %}
 {% for item in cart.items %}
   <div class="wsg-collections-list-{{item.id}}" style="display:none">
     {{item.product.collections | json}}
