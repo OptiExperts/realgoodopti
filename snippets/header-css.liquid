@@ -1,16 +1,16 @@
 
 <!-- Link all your CSS files below -->
 
-<link rel="preload" href="{{ 'timber.scss.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" data-href="{{ 'timber.scss.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
 
 
-<link rel="preload" href="{{ 'plugins.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
+<link rel="preload" data-href="{{ 'plugins.css' | asset_url }}" as="style" onload="this.rel='stylesheet'">
 
 <noscript>
-	<link rel="stylesheet" href="{{ 'timber.scss.css' | asset_url }}">
-	<link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}">
+	<link rel="stylesheet" data-href="{{ 'timber.scss.css' | asset_url }}">
+	<link rel="stylesheet" data-href="{{ 'plugins.css' | asset_url }}">
 </noscript>
-<script>
+<script type="lazyload2">
   
 /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
