@@ -23,12 +23,12 @@
       {% if product.featured_image.src != blank %}
       <a class="image-wrap" href="{{ product.url | within: collection }}">
         {% if product.images.size > 1 and settings.product_dual_thumb_enable == true %}
-        <img class="lazyload popup_cart_image" alt="{{ product.featured_image.alt | escape }}" data-src="{{ product.featured_image.src | img_url: '600x800', crop: 'bottom' }}">
+        <img class="  popup_cart_image" alt="{{ product.featured_image.alt | escape }}" src="{{ product.featured_image.src | img_url: '600x800', crop: 'bottom' }}">
         {% for image in product.images limit: 1 offset: 1 %}
-        <img class="lazyload popup_cart_image" alt="{{ product.featured_image.alt | escape }}" data-src="{{ image.src | img_url: '600x800', crop: 'bottom' }}">
+        <img class="  popup_cart_image" alt="{{ product.featured_image.alt | escape }}" src="{{ image.src | img_url: '600x800', crop: 'bottom' }}">
         {% endfor %}
         {% else %}
-        <img class="lazyload popup_cart_image" alt="{{ product.featured_image.alt | escape }}" data-src="{{ product.featured_image.src | img_url: '600x800', crop: 'bottom' }}">
+        <img class="  popup_cart_image" alt="{{ product.featured_image.alt | escape }}" src="{{ product.featured_image.src | img_url: '600x800', crop: 'bottom' }}">
       </a>
       {% endif %}
       {% else %}
