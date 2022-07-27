@@ -28,14 +28,14 @@
 				<div class="inn">
                   <div class="top--sec">
                     <div class="inner">
-                      <img src="https://cdn.shopify.com/s/files/1/0233/7590/4845/files/Vector.svg?v=1655976908" alt="" class="lazyload quote--icon">
+                      <img data-src="https://cdn.shopify.com/s/files/1/0233/7590/4845/files/Vector.svg?v=1655976908" alt="" class="lazy2 quote--icon">
                       {%- if block.settings.rvw_heading != '' -%}<h5 class="title">{{ block.settings.rvw_heading }}</h5>{% endif %}
                     </div>
                   </div>
                   <div class="bottom--sec">
                     <div class="auth--info">
                       {%- if block.settings.rvw_auth_thumb != '' -%}
-                      <span class="auth--thumb"><img src="{{ block.settings.rvw_auth_thumb | img_url: '100x100' }}" alt="" class="lazyload"></span>
+                      <span class="auth--thumb"><img data-src="{{ block.settings.rvw_auth_thumb | img_url: '100x100' }}" alt="" class="lazy2"></span>
                       {% endif %}
                       {%- if block.settings.rvw_auth_name != '' -%}
                       <span class="auth--name">@{{ block.settings.rvw_auth_name }}</span>
