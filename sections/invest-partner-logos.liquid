@@ -13,7 +13,7 @@
             {% endif %}
             
               {%- if block.settings.partner_logo -%}
-              <img class="lazy2" data-src="{{ block.settings.partner_logo | img_url: 'master' }}" alt="">
+              <img src="{{ block.settings.partner_logo | img_url: 'master' }}" alt="">
               {% endif %}
             {%- if block.settings.partner_link -%}
             </a>
