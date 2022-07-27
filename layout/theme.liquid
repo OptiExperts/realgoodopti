@@ -569,7 +569,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="theme-color" content="{{ settings.color_primary }}">
   <link rel="canonical" href="{{ canonical_url }}">
 	<!-- Snap Pixel Code -->
-    <script type='text/javascript'>if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
+    <script type='text/javascript'>
     (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
     {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
     a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
@@ -581,7 +581,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'user_email': 'contactus@realgoodfoods.com'
     });
     snaptr('track', 'PAGE_VIEW');
-}</script>
+</script>
 
     <!-- End Snap Pixel Code -->
 	<!-- FB Pixel Code -->
@@ -659,9 +659,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   {% include 'judgeme_core' %} {% endif %}
   <!-- CURALATE -->
-  <script>if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
+  <script>
 var CRL8_SITENAME = 'realgoodfoodco-pon8kc';!function(){var e=window.crl8=window.crl8||{},n=!1,i=[];e.ready=function(e){n?e():i.push(e)},e.pixel=e.pixel||function(){e.pixel.q.push(arguments)},e.pixel.q=e.pixel.q||[];var t=window.document,o=t.createElement("script"),c=e.debug||-1!==t.location.search.indexOf("crl8-debug=true")?"js":"min.js";o.async=!0,o.src=t.location.protocol+"//edge.curalate.com/sites/"+CRL8_SITENAME+"/site/latest/site."+c,o.onload=function(){n=!0,i.forEach(function(e){e()})};var r=t.getElementsByTagName("script")[0];r.parentNode.insertBefore(o,r.nextSibling)}();
-}</script>
+</script>
 
 
   {% render 'shogun-head' %}
@@ -709,8 +709,8 @@ flex: 0 0 50%;
   
   
   
-  	<link rel="preload"" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="preload"" type="text/css" href="//kenwheeler.github.io/slick/slick/slick-theme.css" as="style" onload="this.rel='stylesheet'">
+  	<link rel="preload" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" type="text/css" href="//kenwheeler.github.io/slick/slick/slick-theme.css" as="style" onload="this.rel='stylesheet'">
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async defer></script>
   
   
@@ -805,23 +805,17 @@ flex: 0 0 50%;
 {% render 'hextom_spm_main', product: product, customer: customer %}
 <!-- **END** Hextom SPM Integration // Main Include - DO NOT MODIFY -->
 <script>window.intercomSettings = {app_id: "uyl8cpph"};</script>
-<script>if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
+<script>
 // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/uyl8cpph&#39;
 (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/uyl8cpph';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-}
+
   </script>
-  {{ 'realgoodfoods.min.js' | asset_url | script_tag }}
+
 
 <!-- **BEGIN** Hextom FSB Integration // Main Include - DO NOT MODIFY -->
     {% render 'hextom_fsb_main', product: product, customer: customer %}
     <!-- **END** Hextom FSB Integration // Main Include - DO NOT MODIFY -->
 
-
-
-  
-  
-  
-  
   
   <script>
   $(document).ready(function(){
@@ -1011,13 +1005,10 @@ flex: 0 0 50%;
     },1500)
   </script>
  
-  
-  
-  
 </body>
 </html>
 <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
-<script type="text/javascript">
+<script type="lazyload2">
   // Liquid variables:
   var afterpay_product = {{ product | json }};
   var afterpay_product_variant = {{ product.selected_or_first_available_variant | json }};
