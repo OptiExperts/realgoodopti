@@ -852,9 +852,9 @@ flex: 0 0 50%;
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" async defer></script>
   
   
-
-
-  
+{% if template contains index %}{% else %}
+{% include 'globo.formbuilder.scripts' %}
+  {% endif %}
   <script type="lazyload2">
     
     (function()
