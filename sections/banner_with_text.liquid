@@ -8,10 +8,10 @@
           <!--=======  ad section image  =======-->
 
           <div class="footer-banner-section-image mb-5 {% if section.settings.banner_img_mob != blank  %} has_mob_img {% endif %}">
-            <img data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/922x329 {% endif %}" class="lazyload img-fluid" alt="">
+            <img data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/922x329 {% endif %}" class="lazy2 lazyload img-fluid" alt="">
           	
             {% if section.settings.banner_img_mob != blank  %}
-            	<img src="{{ section.settings.banner_img_mob | img_url: 'master' }}" at="" class="lazyload img-fluid mobile">            
+            	<img data-src="{{ section.settings.banner_img_mob | img_url: 'master' }}" at="" class="lazy2 lazyload img-fluid mobile">            
           	{% endif %}
             
           </div>
