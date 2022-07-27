@@ -1,7 +1,20 @@
 
 
-	<link rel="stylesheet" href="{{ 'timber.scss.css' | asset_url }}">
-	<link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}">
+	<link rel="stylesheet" data-href="{{ 'timber.scss.css' | asset_url }}">
+	<link rel="stylesheet" data-href="{{ 'plugins.css' | asset_url }}">
+
+
+
+{% if template contains 'index' %}
+{%- render '__home-css' -%}
+{% elsif template contains 'product' %}
+{%- render '__product-css' -%}
+{% elsif template contains 'collection' %}
+{%- render '__collection-css' -%}
+{% else %}
+<link rel="stylesheet" href="{{ 'timber.scss.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'plugins.css' | asset_url }}">
+{% endif %}
 
 <!-- <script type="lazyload2">
  
