@@ -17,7 +17,7 @@
 		<div id="wlmpnf">{{ wlmPnfContent }}</div>
 	  {% else %}
 		<wlm class="wlm-content">
-
+		  {{ content_for_layout }}
 		</wlm>
 		<div id="wlmpnf" style="display:none;">{{ wlmPnfContent }}</div>
         {% include "wlm-pwd-form" %}
