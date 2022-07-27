@@ -700,13 +700,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% include 'wlm-head' %}
   <!-- Avada FSB Script -->
  {% include 'avada-fsb-setting' %}
- {% if template contains 'index' %}
-   {% else %}
   <!-- /Avada FSB Script -->
   {%- render 'bold-ro-init' -%}
   {%- include 'bold-common' -%}
   {%- include 'oldIE-js' -%}
-  <!-- JS -->{% endif %}
+  <!-- JS -->
   {%- include 'header-js' -%}
 
 
@@ -855,7 +853,7 @@ flex: 0 0 50%;
   
   
 
-{% include 'globo.formbuilder.scripts' %}
+
   
   <script type="lazyload2">
     
