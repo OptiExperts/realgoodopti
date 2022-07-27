@@ -777,7 +777,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {%- assign isWsgCustomer = false -%}
 {% include 'wsg-header' %}
 <script async type="lazyload2" data-src='https://affilo.io/libs/affiliate.lib.js'></script>
-  <script>
+  <script type="lazyload2">
     setInterval(function(){
    $(".owl-next").click();
 },5000);
@@ -1124,7 +1124,7 @@ flex: 0 0 50%;
 </body>
 </html>
 <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
-<script type="text/javascript">
+<script type="lazyload2">
   // Liquid variables:
   var afterpay_product = {{ product | json }};
   var afterpay_product_variant = {{ product.selected_or_first_available_variant | json }};

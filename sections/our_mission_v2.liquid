@@ -35,7 +35,7 @@
                   <div class="bottom--sec">
                     <div class="auth--info">
                       {%- if block.settings.rvw_auth_thumb != '' -%}
-                      <span class="auth--thumb"><img data-src="{{ block.settings.rvw_auth_thumb | img_url: '100x100' }}" alt="" class="lazy2 lazyload"></span>
+                      <span class="auth--thumb"><img src="{{ block.settings.rvw_auth_thumb | img_url: '100x100' }}" alt="" class="lazyload"></span>
                       {% endif %}
                       {%- if block.settings.rvw_auth_name != '' -%}
                       <span class="auth--name">@{{ block.settings.rvw_auth_name }}</span>
