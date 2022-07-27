@@ -1,8 +1,45 @@
-<!doctype html>
+{% comment %} you can always turn off the speedupkernel{% endcomment %}
+{%- assign speedupkernel = true -%}
+{%- assign is_admin_interface = false -%}
+
+{%- if speedupkernel -%}
+{%- if request.host contains 'myshopify.com' -%}
+{%- assign is_admin_interface = true -%}
+{%- else -%}
+{%- assign is_admin_interface = false -%}
+{%- endif -%}
+
+{%- if request.host contains 'shopifypreview.com' -%}
+{%- assign is_admin_interface = false -%}
+{%- endif -%}
+
+{%- if request.host contains 'gempages.net' -%}
+{%- assign is_admin_interface = true -%}
+{%- endif -%}	
+
+{%- if request.path contains 'cart' -%}
+{%- assign is_admin_interface = true -%}
+{%- endif -%}
+
+{%- if request.path contains 'checkout' -%}
+{%- assign is_admin_interface = true -%}
+{%- endif -%}
+
+{%- if request.path contains 'pages' -%}
+{%- assign is_admin_interface = true -%}
+{%- endif -%}
+
+{%- if request.path contains 'blog' -%}
+{%- assign speedupkernel = true -%}
+{%- endif -%}
+{%- endif -%}<!doctype html>
 <!--[if IE 9]> <html class="ie9 no-js supports-no-cookies" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js supports-no-cookies" lang="{{ shop.locale }}"> <!--<![endif]-->
 
 <head>
+
+  
+
   {% if collection.handle == 'all' %}
   <style type="text/css">
     
